@@ -24,10 +24,33 @@ cryptopp_inc = include_directories('.')
 
 cryptopp_sources = files(
     'rsa.cpp',
-    'sha.cpp',
-    'filters.cpp',
-    'base64.cpp',
-    'pssr.cpp',
+    'sha.cpp', #
+    'filters.cpp', #
+    'base64.cpp', #
+    'pssr.cpp', #
+
+    # 'pch.cpp', # this file is basically a precompiled header, but it is not used in the CGEM library, so we can skip it.
+    'nbtheory.cpp', #
+    'algparam.cpp', #
+    'fips140.cpp', #
+    'pkcspad.cpp', #
+    'emsa2.cpp', #
+    'ripemd.cpp', #
+    'whrlpool.cpp', #
+    'misc.cpp', #
+    'mqueue.cpp', #
+    'cpu.cpp', #
+    'integer.cpp', #
+    'asn.cpp', #
+    'pubkey.cpp', #
+    'cryptlib.cpp', #
+    'queue.cpp',
+    'iterhash.cpp', #
+
+    'osrng.cpp', #
+    'algebra.cpp',
+    'allocate.cpp',
+    'ecp.cpp',
 )
 
 # | -- [cryptopp] Compiler definitions:  CRYPTOPP_DISABLE_ASM=1;_WIN32_WINNT=0x0A00
